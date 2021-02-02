@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widget_exploration/components/centered_placeholder.dart';
 import 'components/centered_placeholder.dart';
+import 'Styles.dart';
 
 class MainScreen extends StatelessWidget {
   final String title;
@@ -21,7 +22,7 @@ class MainScreen extends StatelessWidget {
   }
 
   Widget banner(BuildContext context) {
-    return Text('Newman!', style: TextStyle(fontFamily: 'Bangers', fontSize: 108.0));
+    return Text('Newman!', style: Styles.headline1);
   }
 
   Widget paddedPlaceholder() {
