@@ -11,6 +11,31 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text(title)),
-        body: CenteredPlaceholder(padding: 50));
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [ banner(context),
+          placeholderRow(),
+          placeholderRow()
+      ])
+    );
+  }
+
+  Widget banner(BuildContext context) {
+    return Text('Newman!', style: TextStyle(fontFamily: 'Bangers', fontSize: 108.0));
+  }
+
+  Widget paddedPlaceholder() {
+    return Padding(
+              padding: EdgeInsets.all(20),
+              child: SizedBox(
+                child: Image.asset('assets/newman.jpg'),
+                width:100, height: 100)
+                );
+  }
+
+  Widget placeholderRow() {
+    return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [paddedPlaceholder(),paddedPlaceholder(),]);
   }
 }
